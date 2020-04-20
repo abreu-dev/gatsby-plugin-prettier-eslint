@@ -68,6 +68,7 @@ export default class PrettierEslintWatcher {
      */
     if (this.lastTimeFilesChanged > stats.mtimeMs) return;
 
+    // https://github.com/paulmillr/chokidar/issues/1002
     try {
       if (this.prettierLast) {
         if (this.onChangeFullScanLint) {
@@ -82,16 +83,16 @@ export default class PrettierEslintWatcher {
           changed = this.prettierProcessor.processFile(filePath) || changed;
         }
       } else {
-        if (this.onChangeFullScanLint) {
-          changed = this.eslintProcessor.process() || changed;
-        } else {
-          changed = this.eslintProcessor.processFile(filePath) || changed;
-        }
-
         if (this.onChangeFullScanFormat) {
           changed = this.prettierProcessor.process() || changed;
         } else {
           changed = this.prettierProcessor.processFile(filePath) || changed;
+        }
+
+        if (this.onChangeFullScanLint) {
+          changed = this.eslintProcessor.process() || changed;
+        } else {
+          changed = this.eslintProcessor.processFile(filePath) || changed;
         }
       }
     } catch (error) {
