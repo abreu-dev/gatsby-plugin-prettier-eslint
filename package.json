@@ -1,0 +1,59 @@
+{
+  "name": "gatsby-plugin-prettier-eslint",
+  "version": "1.0.0",
+  "description": "Gatsby plugin to automatic format code with prettier and eslint",
+  "main": "index.js",
+  "scripts": {
+    "release": "standard-version",
+    "build": "babel src --out-dir dist",
+    "watch": "babel -w src --out-dir dist",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "npm-publish": "npm run release && git push --follow-tags origin master && npm run prepare && npm publish"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "prettier",
+    "eslint",
+    "watch"
+  ],
+  "author": "André Abreu <andre.abreu@codever.eu>",
+  "bugs": {
+    "url": "https://github.com/andreabreu-me/gatsby-plugin-prettier-eslint/issues"
+  },
+  "homepage": "https://github.com/andreabreu-me/gatsby-plugin-prettier-eslint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreabreu-me/gatsby-plugin-prettier-eslint.git"
+  },
+  "files": [
+    "dist/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "index.js",
+    "gatsby-node.js"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.8.7",
+    "chokidar": "^3.3.1",
+    "fast-glob": "^3.2.2",
+    "lodash.mergewith": "^4.6.2",
+    "picomatch": "^2.2.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "babel-preset-gatsby-package": "^0.3.1",
+    "cross-env": "^7.0.2"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.0",
+    "prettier": "^2.0.4",
+    "eslint": "^6.8.0"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  }
+}
