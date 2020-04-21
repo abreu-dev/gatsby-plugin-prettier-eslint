@@ -13,7 +13,7 @@ This plugin integrates Prettier and ESLint with Gatsby. You can use it in watch 
 ## How to use
 
 - Run `npx eslint --init`, read more at: https://eslint.org/docs/user-guide/getting-started
-- Follow the instructions at: https://prettier.io/docs/en/integrating-with-linters.html
+- Follow the instructions to use ESLint to run Prettier at: https://prettier.io/docs/en/integrating-with-linters.html
 - Then apply the following configs:
 
 ```javascript
