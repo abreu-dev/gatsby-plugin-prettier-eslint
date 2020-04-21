@@ -8,7 +8,6 @@ const defaultOptions = {
   onChangeFullScanLint: false,
   onChangeFullScanFormat: false,
   prettierLast: false,
-  // common ignore patterns
   ignorePatterns: [
     "**/node_modules/**/*",
     "**/.git/**/*",
@@ -17,20 +16,12 @@ const defaultOptions = {
     "public/**/*",
   ],
   prettier: {
-    patterns: [
-      // the pattern "**/*.{js,jsx,ts,tsx}" is not used since javascripts files rely on `eslint --fix`
-      "**/*.{css,scss,less}",
-      "**/*.{json,json5}",
-      "**/*.{graphql,gql}",
-      "**/*.{md,mdx}",
-      "**/*.{html}",
-      "**/*.{yaml,yml}",
-    ],
+    patterns: [],
     ignorePatterns: [],
     customOptions: {},
   },
   eslint: {
-    patterns: "**/*.{js,jsx,ts,tsx}",
+    patterns: [],
     ignorePatterns: [],
     formatter: "stylish",
     maxWarnings: undefined,
@@ -38,10 +29,7 @@ const defaultOptions = {
     failOnError: false,
     failOnWarning: false,
     plugins: [],
-    customOptions: {
-      fix: true,
-      cache: true,
-    },
+    customOptions: {},
   },
 };
 
