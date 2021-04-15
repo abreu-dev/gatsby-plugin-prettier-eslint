@@ -47,7 +47,7 @@
     "@babel/core": "^7.8.7",
     "babel-preset-gatsby-package": "^0.3.1",
     "cross-env": "^7.0.2",
-    "standard-version": "^7.1.0"
+    "standard-version": "^8.0.1"
   },
   "peerDependencies": {
     "gatsby": "^2.0.0 || ^3.0.0",
