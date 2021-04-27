@@ -6,9 +6,16 @@ This plugin integrates Prettier and ESLint with Gatsby. You can use it in watch 
 
 ## Install
 
-- `npm install prettier`
-- `npm install eslint`
-- `npm install gatsby-plugin-prettier-eslint`
+```
+npm install prettier --save-dev
+npm install eslint --save-dev
+npm install gatsby-plugin-prettier-eslint --save-dev
+
+or
+yarn add prettier --dev
+yarn add eslint --dev
+yarn add gatsby-plugin-prettier-eslint --dev
+```
 
 ## How to use
 
